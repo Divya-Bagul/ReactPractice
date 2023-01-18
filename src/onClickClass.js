@@ -21,7 +21,9 @@ class DataClass extends Component{
               {/* <h1>{count}</h1> */}
     
               {/* use props */}
-            {/* <h1>{props.Name}</h1> */}
+            <h1>{this.props.Name}</h1>
+            <h1>{this.props.variableName}</h1>
+
             <button onClick={this.getName}>click me using Class</button>
             </div>
             

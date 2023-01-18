@@ -5,7 +5,7 @@ function USer() {
         return "function component"+a+b;
   }
   
-function Classuser() {
+  function Classuser() {
       var  a=8;
       var b = 9;
       return "function user"+a+b;
