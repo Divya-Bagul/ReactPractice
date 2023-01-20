@@ -7,6 +7,8 @@ import ClickFun from './onClickFun';
 import ClickClass from './onClickClass';
 import UserClass from './UserClass';
 import UserData from './getInput';
+import FormData from './form';
+
 
 
 import reportWebVitals from './reportWebVitals';
@@ -17,6 +19,8 @@ root.render(
   //   <App />
   // </React.StrictMode>
   <React.StrictMode>
+
+    <FormData /> 
   <User.Classuser /> 
   <User.USer />
   <UserClass />
