@@ -20,6 +20,8 @@ function Data(props){
         <h1>{props.variableName}</h1>
 
         <button onClick={getName}>click me</button>
+        <button onClick={props.datafun}>click me</button>
+
         </div>
         
     );

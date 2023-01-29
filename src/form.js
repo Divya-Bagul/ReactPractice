@@ -1,4 +1,7 @@
 import {useState} from "react";
+import {Link, Routes, Route, useNavigate} from 'react-router-dom';
+
+
 function FormData(){
 const[name,setname] = useState("");
 const[lang,setlang] = useState("");
@@ -6,12 +9,8 @@ const[tnc,settnc] = useState(false)
 const[show,setshow] = useState(false)
 const[disable,setdisable] = useState(true)
 const[usercount,setuserconut] = useState(1)
-
-
-
-
-
-    function getFormData(e){
+const navigate = useNavigate();
+function getFormData(e){
         e.preventDefault();
         setdisable(false);
         if(name != '' && lang != '' && tnc != false){
@@ -19,6 +18,10 @@ const[usercount,setuserconut] = useState(1)
         }else{
             setshow(false);
         }
+        navigate('/contacts',name);
+      
+
+   
      
         console.log(name,lang,tnc);
 }
@@ -31,7 +34,7 @@ const[usercount,setuserconut] = useState(1)
 
     return (
         <div>
-            <form onSubmit={getFormData}>
+            <form onSubmit={getFormData} >
             <input type="text" placeholder="enter name" onChange={(e)=>setname(e.target.value)}/>
             <br></br>
             <select onChange={(e)=>setlang(e.target.value)}>
